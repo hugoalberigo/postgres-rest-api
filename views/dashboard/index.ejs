@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Users List</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1 style="margin: 20px;">List of Users</h1>
+        <div class="container fluid" style="margin-top: 30px;">
+            <button style="float: right; margin-bottom: 10px; margin-right: 10px;"><a style="text-decoration: none;" href="dashboard/register">Add User</a></button>
+        </div>
+        <div class="container fluid">
+            <table class="table table-bordered user_game">
+                <thead>
+                    <tr>
+                        <th width="10%">User Game ID</th>
+                        <th width="15%">Name</th>
+                        <th width="10%">Date of Birth</th>
+                        <th width="20%">Address</th>
+                        <th width="30%">Bio</th>
+                        <th width="15%">Config</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% user_game_biodata.forEach(i => { %>
+                        <tr>
+                            <td><%= i.user_game_id %></td>
+                            <td><%= i.name %></td>
+                            <td><%= i.dob %></td>
+                            <td><%= i.address %></td>
+                            <td><%= i.bio %></td>
+                            <td class="align-middle">
+                                <button style="margin: 5px;"><a style="text-decoration: none;" href="/dashboard/update/<%= i.id %> ">Edit</a></button>
+                                <button onclick=""><a style="text-decoration: none;" href="/dashboard/delete/<%= i.id %> ">Delete</a></button>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

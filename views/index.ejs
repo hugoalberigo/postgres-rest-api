@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container" style="margin-top: 20vh;">
+            <form method="post" action="/login">
+                <div class="container formLogin col-md-4 offset-md-4">
+                    <h1 style="text-align: center">Login</h1>
+                    <p style="margin-top: 30px;">Please fill in this form to login.</p>
+                    <hr>
+                    <div>
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+                    </div>
+                    <button type="submit" class="loginbtn">Enter</button>
+                </div>
+            </form>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

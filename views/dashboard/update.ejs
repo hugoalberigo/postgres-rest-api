@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Update User Biodata</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="container fluid">
+            <form method="post" action="/dashboard/update/<%= user_game_biodata.id %>">
+                <div class="formUpdate col-md-12">
+                    <h1 style="text-align: center">Update Biodata</h1>
+                    <p style="margin-top: 30px;">Please fill in this form to update your biodata.</p>
+                    <hr>
+                    <div>
+                        <label for="user_game_id"><b>User Game ID</b></label>
+                        <input type="text" value="<%= user_game_biodata.user_game_id %>" name="user_game_id" required readonly>
+                    </div>
+                    <div>
+                      <label for="name"><b>Name</b></label>
+                      <input type="text" value="<%= user_game_biodata.name %>" name="name" required>
+                    </div>
+                    <div>
+                        <label for="dob"><b>Date of Birth</b></label>
+                        <input type="date" class="date" value="<%= user_game_biodata.dob %>" name="dob" required>
+                    </div>
+                    <div>
+                      <label for="address"><b>Address</b></label>
+                      <input type="text" value="<%= user_game_biodata.address %>" name="address">
+                  </div>
+                  <div>
+                    <label for="bio"><b>Bio</b></label>
+                    <textarea type="text" class="form-control" name="bio" rows="3"><%= user_game_biodata.bio %></textarea>
+                </div>
+                    <button type="submit" style="margin-top: 10px;" class="registerbtn">Save Change</button>
+                </div>
+            </form>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

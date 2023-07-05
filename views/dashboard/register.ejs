@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="container fluid">
+            <form method="post" action="/dashboard/register">
+                <div class="formRegister col-md-12">
+                    <h1 style="text-align: center">Register New Account</h1>
+                    <p style="margin-top: 30px;">Please fill in this form to login.</p>
+                    <hr>
+                    <div>
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+                    </div>
+                    <div>
+                      <label for="email"><b>Email</b></label>
+                      <input type="email" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+                    </div>
+                    <p style="margin-top: 30px;">Please fill in this biodata form.</p>
+                    <hr>
+                    <div>
+                        <label for="user_game_id"><b>User Game ID</b></label>
+                        <input type="text" placeholder="Enter User Game ID" name="user_game_id" required>
+                    </div>
+                    <div>
+                      <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Enter Name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="dob"><b>Date of Birth</b></label>
+                        <input type="date" class="date" name="dob" required>
+                    </div>
+                    <div>
+                      <label for="address"><b>Address</b></label>
+                      <input type="text" placeholder="Enter Address" name="address">
+                  </div>
+                  <div>
+                    <label for="bio"><b>Bio</b></label>
+                    <textarea type="text" class="form-control" placeholder="Write Bio" name="bio" rows="3"></textarea>
+                </div>
+                    <button type="submit" class="registerbtn" style="margin-top: 10px;">Register</button>
+                </div>
+            </form>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
